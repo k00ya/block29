@@ -1,0 +1,96 @@
+/* App.css adjustments for card layout */
+.PuppyBowlApp {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 1200px; /* Adjusted to provide more room for cards */
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the flex children */
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+header input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items at the start */
+  gap: 20px; /* Space between the items */
+  width: 100%;
+}
+
+li {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 calc(33% - 40px); /* Adjust to fit 3 items per row with gap */
+  max-width: calc(33% - 40px); /* Ensure items do not grow beyond this width */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.player-details {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%; /* Match the width of other elements for consistency */
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header input[type="text"] {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  ul {
+    justify-content: center;
+  }
+
+  li {
+    flex: 1 1 calc(50% - 40px); 
+    max-width: calc(50% - 40px); 
+  }
+}
